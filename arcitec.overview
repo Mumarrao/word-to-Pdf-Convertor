@@ -1,0 +1,7 @@
+Frontend (JavaScript/HTML/CSS)
+│
+├─ Backend API (Python Flask/Django)
+│  │
+│  └─ Conversion Service (C#/.NET Core)
+│
+└─ Storage (Free cloud options)
