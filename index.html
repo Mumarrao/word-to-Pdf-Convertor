@@ -106,3 +106,8 @@
     <p>.</p>
 </div>
 <button onclick=genratePDF()">>/button
+    <script>
+        function genratePDF() {
+            const element= document.getElementByid("content");html12pdf().from(element).save();
+        }
+    </script>
