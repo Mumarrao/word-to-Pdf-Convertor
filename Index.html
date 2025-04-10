@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Word to PDF Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Advanced Word to PDF Converter</h1>
+        
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <div id="upload-container" class="text-center py-5">
+                    <input type="file" id="file-input" accept=".doc,.docx" style="display: none;">
+                    <button class="btn btn-primary btn-lg" onclick="document.getElementById('file-input').click()">
+                        <i class="bi bi-upload"></i> Select Word File
+                    </button>
+                    <p class="mt-3">or drag and drop files here</p>
+                </div>
+                
+                <div id="options-container" class="d-none">
+                    <h4>Conversion Options</h4>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Page Size</label>
+                            <select class="form-select" id="page-size">
+                                <option value="A4" selected>A4</option>
+                                <option value="Letter">Letter</option>
+                                <option value="Legal">Legal</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Orientation</label>
+                            <select class="form-select" id="orientation">
+                                <option value="Portrait" selected>Portrait</option>
+                                <option value="Landscape">Landscape</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="preserve-formatting" checked>
+                        <label class="form-check-label" for="preserve-formatting">Preserve formatting</label>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="optimize-pdf" checked>
+                        <label class="form-check-label" for="optimize-pdf">Optimize PDF for web</label>
+                    </div>
+                    
+                    <button id="convert-btn" class="btn btn-success w-100 py-2">
+                        <i class="bi bi-file-earmark-pdf"></i> Convert to PDF
+                    </button>
+                </div>
+                
+                <div id="progress-container" class="d-none text-center my-4">
+                    <div class="progress mb-3">
+                        <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                             role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p id="status-text">Processing your file...</p>
+                </div>
+                
+                <div id="result-container" class="d-none text-center my-4">
+                    <h4 class="text-success">Conversion Complete!</h4>
+                    <a id="download-link" href="#" class="btn btn-primary my-3">
+                        <i class="bi bi-download"></i> Download PDF
+                    </a>
+                    <button id="new-conversion" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-repeat"></i> New Conversion
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features mt-5">
+            <h3 class="text-center mb-4">Advanced Features</h3>
+            <div class="row">
+                <div class="col-md-4 feature-item">
+                    <h5><i class="bi bi-shield-lock"></i> Secure Processing</h5>
+                    <p>Files are processed securely and deleted after conversion.</p>
+                </div>
+                <div class="col-md-4 feature-item">
+                    <h5><i class="bi bi-lightning-charge"></i> Batch Conversion</h5>
+                    <p>Convert multiple Word files to PDF at once (coming soon).</p>
+                </div>
+                <div class="col-md-4 feature-item">
+                    <h5><i class="bi bi-gear"></i> Advanced Options</h5>
+                    <p>Customize margins, quality, and other PDF settings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
